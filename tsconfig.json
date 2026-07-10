@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+,     "icons/icon-template.txt"  ],
   "exclude": ["node_modules"]
 }
