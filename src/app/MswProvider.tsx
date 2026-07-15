@@ -1,4 +1,3 @@
-// src/components/MswProvider.tsx
 "use client";
 
 import { useEffect } from "react";
