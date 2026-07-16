@@ -1,5 +1,3 @@
-// src/app/page.tsx
-
 import { HomeHeroSection } from "./_components/home-hero-section/homeHeroSection";
 import { CourseCardList } from "./(courses)/_components/courseCardList";
 import { homeFeatures } from "@/data/home-features";
