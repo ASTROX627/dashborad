@@ -1,34 +1,17 @@
-import { CourseSummary } from "@/types/course-summary.interface";
+// src/app/page.tsx
+
 import { HomeHeroSection } from "./_components/home-hero-section/homeHeroSection";
 import { CourseCardList } from "./(courses)/_components/courseCardList";
 import { homeFeatures } from "@/data/home-features";
 import Feature from "./_components/feature/feature";
 import { Button } from "./_components/button";
 import { IconArrowLeftFill } from "./_components/icons";
-import { BlogPostSummary } from "@/types/blog-post-summary.interface";
 import { BlogPostCardList } from "./(blog)/-components/blog-post-card-list";
-import { API_URL } from "@/configs/global";
 import { TestimonialList } from "./_components/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonials";
-import { API_MOCKING_STATUS } from "../configs/global";
+import { getNewestCourses } from "@/services/courses/courses";
+import { getNewestPosts } from "@/services/posts/posts";
 
-const isMocking = API_MOCKING_STATUS === "enabled";
-
-async function getNewestCourses(count: number): Promise<CourseSummary[]> {
-  const res = await fetch(
-    `${API_URL}/courses/newest/${count}`,
-    isMocking ? { cache: "no-store" } : { next: { revalidate: 24 * 60 * 60 } },
-  );
-  return res.json();
-}
-
-async function getNewestPosts(count: number): Promise<BlogPostSummary[]> {
-  const res = await fetch(
-    `${API_URL}/blog/newest/${count}`,
-    isMocking ? { cache: "no-store" } : { next: { revalidate: 24 * 60 * 60 } },
-  );
-  return res.json();
-}
 
 export default async function Home() {
   const newestCoursesData = getNewestCourses(4);

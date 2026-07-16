@@ -1,3 +1,4 @@
+// src/providers/msw-provider.tsx
 "use client";
 
 import { IS_DEVELOPMENT } from "@/configs/global";

@@ -3,8 +3,8 @@ import { CourseSummary } from "@/types/course-summary.interface";
 
 export const mockCourses: CourseSummary[] = [
   {
-    id: 79,
-    title: "RxJS در انگیولار",
+    id: 1,
+    title: "angular",
     courseCategoryId: 23,
     duration: "1 ساعت 12 دقیقه",
     level: "پیشرفته",
@@ -20,8 +20,8 @@ export const mockCourses: CourseSummary[] = [
     basePrice: 0,
   },
   {
-    id: 84,
-    title: "دوره آموزش جامع React",
+    id: 2,
+    title: "React",
     courseCategoryId: 23,
     duration: "6 ساعت ",
     level: "مقدماتی",
@@ -37,8 +37,8 @@ export const mockCourses: CourseSummary[] = [
     basePrice: 750000,
   },
   {
-    id: 97,
-    title: "آموزش پیشرفته React: پروژه پنل ادمین",
+    id: 3,
+    title: "advanced react",
     courseCategoryId: 23,
     duration: "6 ساعت ",
     level: "پیشرفته",
@@ -54,8 +54,8 @@ export const mockCourses: CourseSummary[] = [
     basePrice: 1500000,
   },
   {
-    id: 105,
-    title: "معماری پروژه های Large-Scale در ری‌اکت با استفاده از Next.js",
+    id: 4,
+    title: "next.js",
     courseCategoryId: 23,
     duration: "40 ساعت ",
     level: "پیشرفته",
@@ -74,7 +74,7 @@ export const mockCourses: CourseSummary[] = [
 
 export const mockPosts: BlogPostSummary[] = [
   {
-    title: "5 توصیه برتر برای افزایش مقیاس پذیری پروژه های React",
+    title: "React",
     slug: "5-توصیه-برتر-برای-افزایش-مقیاس-پذیری-پروژه-ها",
     postDate: "1403/03/27",
     studyTime: 0,
@@ -86,7 +86,7 @@ export const mockPosts: BlogPostSummary[] = [
       "https://minio-classbon.darkube.app/courses-images/CB-RAA/674216f2-2bb2-421a-a943-f6b7f05de1dd.webp",
   },
   {
-    title: "ری‌‌‌‌‌‌اکت چیست؟ معرفی کامل کتابخانه ری‌اکت",
+    title: "ری اکت چیست",
     slug: "ری‌‌‌‌‌‌اکت-چیست؟-معرفی-کامل-کتابخانه-ری‌اکت",
     postDate: "1403/03/27",
     studyTime: 0,

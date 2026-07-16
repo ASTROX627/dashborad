@@ -1,8 +1,3 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 
@@ -16,10 +11,17 @@ const config: Config = {
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   moduleNameMapper: {
-    "^@/components/(.*)$": "<rootDir>/components/$1",
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
+  setupFiles: ["<rootDir>/jest.polyfills.cjs"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jsdom",
+  testEnvironmentOptions: {
+    customExportConditions: [""],
+  },
+  transformIgnorePatterns: [
+    "/node_modules/(?!(msw|@mswjs|@open-draft|rettime|outvariant|strict-event-emitter|headers-polyfill|is-node-process)/)",
+  ],
 };
 
 export default createJestConfig(config);
